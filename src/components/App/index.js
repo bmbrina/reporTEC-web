@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import logo from './logo.svg';
-import './App.css';
 
 class App extends Component {
   // static propTypes = {}
@@ -12,13 +11,7 @@ class App extends Component {
     const { className, ...props } = this.props;
     return (
       <div className={classnames('App', className)} {...props}>
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h1 className="App__title">reporTEC</h1>
       </div>
     );
   }
