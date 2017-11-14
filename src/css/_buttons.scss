@@ -1,0 +1,23 @@
+.button {
+  border: 0;
+  color: #fff;
+  font-family: $base-font;
+  font-size: px-to-rems(14);
+  font-weight: 200;
+  outline: 0;
+  padding: px-to-rems(10) px-to-rems(20);
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__orange {
+    background-color: transparent;
+    border: 3px solid $action-color;
+    color: $action-color;
+    font-weight: 400;
+    border-radius: 25px;
+    padding: 10px 70px;
+  }
+}

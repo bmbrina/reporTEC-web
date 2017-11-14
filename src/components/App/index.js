@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import logo from './logo.svg';
 
 class App extends Component {
   // static propTypes = {}
@@ -10,8 +9,20 @@ class App extends Component {
   render() {
     const { className, ...props } = this.props;
     return (
-      <div className={classnames('App', className)} {...props}>
-        <h1 className="App__title">reporTEC</h1>
+      <div className={classnames('app align-flex center', className)} {...props}>
+        <div className="app__block align-flex horizontal is-column">
+          <h2>Iniciar sesión</h2>
+          <div className="app__block__wrapper">
+            <label>Usuario</label>
+            <input type="text" placeholder="L000000@itesm.mx"/>
+          </div>
+          
+          <div className="app__block__wrapper">
+            <label>Contraseña</label>
+            <input type="password" placeholder="********"/>
+          </div>
+          <a href="/incidents" className="button button__orange action">Ingresar</a>
+        </div>
       </div>
     );
   }

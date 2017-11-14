@@ -1,0 +1,28 @@
+%background {
+  background-color: $tec-blue;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,.5);
+  color: #fff;
+  padding: 20px;
+}
+
+.main {
+  &__navigation {
+    @extend %background;
+    position: fixed;
+    width: 100%;
+
+    &__item {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__footer {
+    @extend %background;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
+}

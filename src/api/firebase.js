@@ -10,7 +10,3 @@ var config = {
 }
 
 let app = firebase.initializeApp(config)
-
-export function firebaseAuth() {
-  return app.auth()
-}

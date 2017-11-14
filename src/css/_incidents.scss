@@ -1,0 +1,61 @@
+.incidents {
+  height: 100vh;
+  padding-top: 100px;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__table {
+    background: #FFFFFF;
+    border: 1px solid #E2E7EB;
+    width: 70%;
+
+    tr {
+      height: px-to-ems(50);
+
+      &:first-child {
+        border: 1px solid #E2E7EB;
+      }
+
+      &:nth-child(even) {
+        background: #F7FDFF;
+      }
+    }
+
+    th {
+      font-size: px-to-ems(16);
+    }
+
+    td, th {
+      padding: px-to-ems(15);
+
+      a.link {
+        color: $action-color;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    td.pending {
+      color: $pending-color;
+    }
+
+    td.done {
+      color: $done-color
+    }
+
+    td.hidden {
+      display: none;
+    }
+
+    select {
+      background: #FFFFFF;
+      border: 1px solid #E2E7EB;
+      font-size: px-to-ems(15);
+      height: px-to-ems(40);
+    }
+  }
+}
