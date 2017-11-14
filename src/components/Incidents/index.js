@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import { browserHistory } from 'react-router';
 import * as incidents_api from '../../api/incidents_api.js'
 
 class Incidents extends Component {
@@ -15,12 +16,12 @@ class Incidents extends Component {
     let promise = incidents_api.getIncidents()
 
     promise.then( response => {
-      this.setState({
-        incidents: response
-      }, () => {
-        console.log(this.state.incidents)
-      })
+      this.setState({ incidents: response })
     })
+  }
+
+  showIncidentDetails(incident) {
+    browserHistory.push("/incidents/" + incident.key);
   }
 
   updateSelectedIncidentStatus() {
@@ -96,7 +97,7 @@ class Incidents extends Component {
           <td>{incident.date}</td>
           <td className={incident.status}>{statusTitle}</td>
           <td>{incident.category}</td>
-          <td className={hidden}><a className="link">Atender</a></td>
+          <td className={hidden}><a className="link" onClick={this.showIncidentDetails.bind(this, incident)}>Atender</a></td>
         </tr>
       )
     });
