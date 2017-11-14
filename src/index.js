@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { browserHistory } from 'react-router';
 import Routes from './routes';
-import './css/alom.css';
 import './css/application.css';
 import registerServiceWorker from './registerServiceWorker';
 
