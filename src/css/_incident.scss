@@ -1,0 +1,9 @@
+.incident {
+  height: 100vh;
+  padding-top: 100px;
+
+  &__category {
+    font-style: italic;
+    color: $action-color;
+  }
+}
