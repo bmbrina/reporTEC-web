@@ -45,7 +45,7 @@ class Incident extends Component {
 
   render() {
     const { className, ...props } = this.props;
-    let incident, colorStatus, incidentImage;
+    let incident, colorStatus, incidentImage, hidden
 
     if (this.state.incident) {
       incident = this.state.incident
@@ -55,6 +55,12 @@ class Incident extends Component {
         incidentImage = incident.imageUrl
       } else {
         incidentImage = NoPreview
+      }
+
+      if (incident.status === "pending") {
+        hidden = ""
+      } else {
+        hidden = "hidden"
       }
     }
 
@@ -71,9 +77,9 @@ class Incident extends Component {
             <p className="incident__label">Evidencia:</p>
             <img src={incidentImage} className="incident__image" />
             <p className="incident__label">Ubicación:</p>
-            <div  id="map"></div>
+            <div id="map"></div>
             <div className="action text-center">
-              <a className="button button__done" onClick={this.completeIncident.bind(this)}>Marcar como atendido</a>
+              <a className={"button button__done " + hidden} onClick={this.completeIncident.bind(this)}>Marcar como atendido</a>
             </div>
           </div>
         </div>

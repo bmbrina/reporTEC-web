@@ -22,6 +22,7 @@ class Incidents extends Component {
 
   showIncidentDetails(incident) {
     browserHistory.push("/incidents/" + incident.key);
+    window.scrollTo(0, 0)
   }
 
   updateSelectedIncidentStatus() {
@@ -82,13 +83,13 @@ class Incidents extends Component {
     }
 
     return filtered_incidents.map( (incident, index) => {
-      let statusTitle, statusClass, hidden
+      let statusTitle, statusClass, linkTitle
       if (incident.status === "pending") {
+        linkTitle = "Atender"
         statusTitle = "Pendiente"
-        hidden = ""
       } else {
+        linkTitle = "Ver"
         statusTitle = "Atendido"
-        hidden = "hidden"
       }
 
       return (
@@ -97,7 +98,7 @@ class Incidents extends Component {
           <td>{incident.date}</td>
           <td className={incident.status}>{statusTitle}</td>
           <td>{incident.category}</td>
-          <td className={hidden}><a className="link" onClick={this.showIncidentDetails.bind(this, incident)}>Atender</a></td>
+          <td><a className="link" onClick={this.showIncidentDetails.bind(this, incident)}>{linkTitle}</a></td>
         </tr>
       )
     });
