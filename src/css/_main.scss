@@ -16,13 +16,13 @@
         text-decoration: underline;
       }
     }
+
+    &__item + &__item {
+      margin-left: 20px;
+    }
   }
 
   &__footer {
     @extend %background;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    right: 0;
   }
 }

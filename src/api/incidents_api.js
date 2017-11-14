@@ -25,3 +25,9 @@ export function getIncidentInformation(key) {
             })
             .catch(error => error)
 }
+
+export function changeIncidentStatus(key) {
+  let ref = database.ref('incidents/' + key)
+  return ref.update({status: "done"})
+            .then(response => response);
+}

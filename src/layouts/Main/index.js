@@ -15,6 +15,7 @@ class Main extends Component {
           <h2 className="main__navigation__logo"><a href="/">REPORTEC</a></h2>
           <nav className="align-flex center">
             <a href="/incidents" className="main__navigation__item">Ver Incidentes</a>
+            <a href="/" className="main__navigation__item">Salir</a>
           </nav>
         </div>
         {this.props.children}

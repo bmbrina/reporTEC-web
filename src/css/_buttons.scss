@@ -20,4 +20,14 @@
     border-radius: 25px;
     padding: 10px 70px;
   }
+
+  &__done {
+    background-color: $done-color;
+    border: 3px solid $done-color;
+    color: #fff;
+    font-weight: 400;
+    border-radius: 25px;
+    padding: 10px 50px;
+    text-transform: uppercase;
+  }
 }

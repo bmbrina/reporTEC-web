@@ -1,9 +1,51 @@
 .incident {
-  height: 100vh;
+  height: auto;
   padding-top: 100px;
+
+  &__title {
+    text-transform: uppercase;
+
+    &.pending {
+      color: $pending-color;
+    }
+
+    &.done {
+      color: $done-color;
+    }
+  }
 
   &__category {
     font-style: italic;
+  }
+
+  &__label {
     color: $action-color;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 30px 0 10px 0;
+  }
+
+  &__desc {
+    margin-left: 30px;
+  }
+
+  &__image {
+    display: block;
+    margin: auto;
+  }
+
+  &__content {
+    margin-top: 50px;
+    width: 90%;
+
+    #map {
+      height: 400px;
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+
+  .action {
+    margin-bottom: 50px;
   }
 }
