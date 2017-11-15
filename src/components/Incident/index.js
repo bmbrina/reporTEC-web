@@ -66,6 +66,7 @@ class Incident extends Component {
 
     return (
       <div className={classnames('incident', className)} {...props}>
+        <a href="/incidents" className="incident__back">Volver</a>
         <h1 className={"incident__title text-center " + colorStatus}> {incident.title} </h1>
         <p className="incident__category text-center">{incident.date}</p>
         <div className="align-flex center">

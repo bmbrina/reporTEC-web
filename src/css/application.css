@@ -36,7 +36,8 @@ body {
 
 .main__navigation {
   position: fixed;
-  width: 100%; }
+  width: 100%;
+  z-index: 100; }
   .main__navigation__item:hover {
     text-decoration: underline; }
   .main__navigation__item + .main__navigation__item {
@@ -101,6 +102,11 @@ body {
 .incident {
   height: auto;
   padding-top: 100px; }
+  .incident__back {
+    color: #5397BF;
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin-left: 30px; }
   .incident__title {
     text-transform: uppercase; }
     .incident__title.pending {
@@ -118,7 +124,9 @@ body {
     margin-left: 30px; }
   .incident__image {
     display: block;
-    margin: auto; }
+    margin: auto;
+    height: auto;
+    width: 50%; }
   .incident__content {
     margin-top: 50px;
     width: 90%; }

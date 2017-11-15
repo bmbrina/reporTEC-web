@@ -2,6 +2,13 @@
   height: auto;
   padding-top: 100px;
 
+  &__back {
+    color: $soft-blue;
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin-left: 30px;
+  }
+
   &__title {
     text-transform: uppercase;
 
@@ -32,6 +39,8 @@
   &__image {
     display: block;
     margin: auto;
+    height: auto;
+    width: 50%;
   }
 
   &__content {
